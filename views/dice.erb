@@ -24,21 +24,22 @@
 
     <div class="container mt-5">
       <h1>KIEI-451 Casino!</h1>
+        <h2>Dice: <%= @die1 %>, <%= @die2 %> </h2>
 
-        <% die1=rand(1..6) %>
-        <% die2=rand(1..6) %>
 
-        <h2>Dice: <%= die1 %>, <%= die2 %>
-
-        <br>
-
-        <img src="http://golearntocode.com/images/dice/<%=die1%>.png">
-        <img src="http://golearntocode.com/images/dice/<%=die2%>.png">
+            <%= @dice %>
+            <!-- for each die, display the image -->
+            <% for zebra in @dice %>
+                <img src="http://golearntocode.com/images/dice/<%= zebra %>.png">
+            <% end %>
     </div>
 
-    <div class="containger mt-5">
+    <div class="container mt-5">
         <!-- Roll Aagain button -->
         <a href="/" class="btn btn-success">Roll Again</a>
+        <a href="/tacos" class="btn btn-danger">Nope</a>
+    </div>
+    
 
 
     <!-- Optional JavaScript -->

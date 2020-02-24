@@ -7,8 +7,18 @@ get "/" do
     #add ruby code here...
 #   "Hello"
 
-# die1=rand(1..6)
-# die2=rand(1..6)
+# @die1 = rand(1..6)
+# @die2 = rand(1..6)
+# @die3 = rand(1..6)
+# @die4 = rand(1..6)
+# @die5 = rand(1..6)
+
+@dice = []
+
+for die in (0..4)
+    die = rand(1..6)
+    @dice << die
+end
 
 # "<h1>Dice: Your first die is #{die1}, your second die is #{die2}.</h1> <p>Your total is #{die1+die2}.</p>"
 
